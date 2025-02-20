@@ -1,5 +1,5 @@
 import kotlin.math.*
-
+//Литвинов Богдан Юрійович Вар 48 формула; x+2.0/3/x*a+sqrt(sin(x))/2/ln(x)+1.0e-3*(x/7).pow(2.0/3)
 fun main() {
 
     println("Lab Work 1");
@@ -24,7 +24,7 @@ fun main() {
     var x : Double = 0.0;//x value
     var i : Int = 0;
     do {
-        println("${i}) X : ${x}, Y : ${Calculate(x, a)}")
+        println("${i}) X : ${x}, Y : ${String.format("%.3f", Calculate(x, a))}")
         x += step;
         ++i;
     }while(x <= StepsCount)
