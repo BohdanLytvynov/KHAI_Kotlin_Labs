@@ -17,14 +17,21 @@ fun main() {
     val a = (1..10).random();
     println("Generating done... \na = ${a}")
 
-    val StepsCount: Int = (xEnd - xStart);
-    val step: Double = (StepsCount.toDouble() / 100)
+    var StepsCount: Int = (xEnd - xStart);
+    var step: Double = 1.0
+
+    if(StepsCount > 100)
+    {
+        step = (StepsCount.toDouble() / 100)
+        StepsCount = 100
+    }
+
     println("Steps: $StepsCount")
     println("Diff: $step")
     var x: Double = 0.0;//x value
     var i: Int = 0;
 
-    val table: Array<Array<Double>> = Array(StepsCount + 1, { Array(2, { Double.NaN }) })
+    val table: Array<Array<Double>> = Array(StepsCount + 1, { Array(2, { 0.0 }) })
 
     do {
         val res: Double = Calculate(x, a);
@@ -51,15 +58,13 @@ fun PrintArray(table: Array<Array<Double>>) {
         }
         println()
     }
-
 }
 
 fun InputInt(msg: String): Int {
     var res: Int = 0
-
     do {
         println(msg)
-        var str: String? = readln()
+        val str: String? = readlnOrNull()
         try {
             res = str!!.toInt()
             println("You have entered: ${res}")
@@ -67,8 +72,6 @@ fun InputInt(msg: String): Int {
         } catch (e: Exception) {
             println("Error: ${e.message} cause of ${e.cause}! Please try again!")
         }
-
     } while (true)
-
     return res;
 }
