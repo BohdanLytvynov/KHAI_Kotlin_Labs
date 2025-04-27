@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lab_Work_5</string>
+    <string name="cost_of_service_hint">Enter cost</string>
+    <string name="likeService_text">Do you like Service?</string>
+    <string name="exelent_20">Exelent (20%)</string>
+    <string name="good_10">Good (10%)</string>
+    <string name="can_be_better_5">Can be better (5%)</string>
+    <string name="should_i_round">Should I round?</string>
+    <string name="calculate_button_content">Calculate</string>
+    <string name="calculated_result_hint">Calculated result: %s</string>
+</resources>
