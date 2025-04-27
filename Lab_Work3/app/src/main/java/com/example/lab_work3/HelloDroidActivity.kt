@@ -35,6 +35,6 @@ class HelloDroidActivity : AppCompatActivity()
 
     private fun OnClick()
     {
-        textMessage?.setText(String.format("The button clicked %s times!", ++counter))
+        textMessage?.setText(String.format("Lytvynov clicked the button %s times!", ++counter))
     }
 }
