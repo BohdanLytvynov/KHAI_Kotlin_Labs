@@ -8,4 +8,5 @@
     <string name="should_i_round">Should I round?</string>
     <string name="calculate_button_content">Calculate</string>
     <string name="calculated_result_hint">Calculated result: %s</string>
+    <string name="Author">This app was made by Bohdan Lytvynov</string>
 </resources>

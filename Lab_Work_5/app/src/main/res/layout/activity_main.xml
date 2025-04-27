@@ -103,5 +103,15 @@
             android:hint="@string/calculated_result_hint"
     />
 
+    <TextView
+            android:id="@+id/footer"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/Author"
+            android:textAlignment="center"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
