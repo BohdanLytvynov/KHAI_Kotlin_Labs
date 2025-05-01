@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lab_Work_6</string>
+    <string name="WelcomeMsg"> Welcome %s! </string>
+</resources>
