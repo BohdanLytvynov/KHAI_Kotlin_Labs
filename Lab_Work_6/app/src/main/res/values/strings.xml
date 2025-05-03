@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Lab_Work_6</string>
     <string name="WelcomeMsg"> Welcome %s! </string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password_button_content">Forgot password?</string>
+    <string name="login_button_content">Login</string>
+    <string name="Authority_content">Made by Bohdan Lytvynov</string>
 </resources>

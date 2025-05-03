@@ -2,6 +2,7 @@ package com.example.lab_work_6
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,29 +12,16 @@ import com.example.lab_work_6.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
-        val loginButton = binding.loginButton
-        val loginInput = binding.loginInput
-        val passwordInput = binding.passInput
-        val loginResult = binding.loginResult
-
-        loginButton.setOnClickListener {
-            if(loginInput.text.isNullOrEmpty() || passwordInput.text.isNullOrEmpty()) {
-                loginResult.text = "Login Failed!"
-                loginResult.setTextColor(Color.RED)
-            }
-            else
-            {
-                loginResult.text = getString(R.string.WelcomeMsg, loginInput.text.toString())
-                loginResult.setTextColor(Color.GREEN)
-            }
+        binding.loginButton.setOnClickListener {
+            onLoginButtonClick()
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -43,5 +31,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         this.setTheme(R.style.ThemeOverlay_AppTheme_MediumContrast)
+    }
+
+    fun onLoginButtonClick () {
+
+        if(binding.loginInput.text.isNullOrEmpty() &&
+            binding.passInput.text.isNullOrEmpty()) {
+
+            binding.loginResult.text = "Login Failed!"
+            binding.loginResult.setTextColor(Color.RED)
+        }
+        else
+        {
+            binding.loginResult.text = "Welcome! ${binding.loginInput.text}"
+            binding.loginResult.setTextColor(Color.GREEN)
+        }
     }
 }
